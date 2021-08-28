@@ -1,6 +1,6 @@
 <template>
   <Fragment>
-    <span>Account</span>
+    <span class="font-medium">Account</span>
     <span role="img" aria-label="robot">
       🤖
     </span>

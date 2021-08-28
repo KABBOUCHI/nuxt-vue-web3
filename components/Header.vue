@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 :style="{ margin: '1rem', textAlign: 'right' }">
+    <h1 class="text-right">
       {{ active ? "🟢" : error ? "🔴" : "🟠" }}
     </h1>
 

@@ -1,6 +1,6 @@
 <template>
   <Fragment>
-    <span>Balance</span>
+    <span class="font-medium">Balance</span>
     <span role="img" aria-label="gold">
       💰
     </span>

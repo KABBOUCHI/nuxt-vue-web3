@@ -1250,10 +1250,10 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@kabbouchi/vue-web3@^0.2.10":
-  version "0.2.10"
-  resolved "https://registry.yarnpkg.com/@kabbouchi/vue-web3/-/vue-web3-0.2.10.tgz#6471891277a0000cd2a753793b8896b0cc8710af"
-  integrity sha512-Kyhalh0Y8PiY2qH5+Nzk4o4G35x0MIF7BCEkfiAUsMQ5oZONLwbYypMQJfKN1DMB9F/pfdI8LR4tCuqOclfrWg==
+"@kabbouchi/vue-web3@^0.2.11":
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/@kabbouchi/vue-web3/-/vue-web3-0.2.11.tgz#5fcb4059fc0a0dd7e442194e458d14d8f3a39f6b"
+  integrity sha512-ae1bjODc2x1Z47tDGmcH0WHsOS8CQgA0hkd+JH/8Q140XOOUMGze4CLedz5Rb3ZiHcOUQ4hFwWSWdRDv/SX2+Q==
   dependencies:
     "@ethersproject/bytes" "^5.4.0"
     "@ethersproject/keccak256" "^5.4.0"

@@ -1,50 +1,50 @@
 <template>
-  <div>
-    <Header />
+  <div class="bg-gray-500 min-h-screen md:flex items-center justify-center text-white">
+    <div class="relative md:max-w-lg min-h-screen md:min-h-0 w-full md:mx-auto bg-gray-800 shadow-lg md:rounded-lg px-8 py-6">
+      <Header />
 
-    <hr :style="{ margin: '2rem' }" />
+      <hr :style="{ margin: '2rem' }" />
 
-    <div
-      :style="{
-        display: 'grid',
-        gridGap: '1rem',
-        gridTemplateColumns: '1fr 1fr',
-        maxWidth: '20rem',
-        margin: 'auto'
-      }"
-    >
-      <button
-        v-for="(newConnector, name) in connectorsByName"
-        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        :key="name"
-        @click="activate(newConnector)"
+      <div
+        :style="{
+          display: 'grid',
+          gridGap: '1rem',
+          gridTemplateColumns: '1fr 1fr',
+          maxWidth: '20rem',
+          margin: 'auto'
+        }"
       >
-        <span
-          class="mr-2 "
-          v-if="newConnector === connector"
-          role="img"
-          aria-label="check"
+        <button
+          v-for="(newConnector, name) in connectorsByName"
+          class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          :key="name"
+          @click="activate(newConnector)"
         >
-          ✅
-        </span>
-        {{ name }}
-      </button>
-    </div>
+          <span
+            class="mr-2 "
+            v-if="newConnector === connector"
+            role="img"
+            aria-label="check"
+          >
+            ✅
+          </span>
+          {{ name }}
+        </button>
+      </div>
 
-    <div
-      class="flex flex-col items-center mt-4"
-    >
-      <button
-        v-if="active || error"
-        class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-red-700 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-        @click="deactivate"
-      >
-        Deactivate
-      </button>
+      <div class="flex flex-col items-center mt-8 text-center">
+        <button
+          v-if="active"
+          class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-red-800 bg-red-100 hover:bg-red-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+          @click="deactivate"
+        >
+          Deactivate
+        </button>
 
-      <h4 v-if="!!error" :style="{ marginTop: '1rem', marginBottom: '0' }">
-        {{ getErrorMessage(error) }}
-      </h4>
+        <h4 v-if="!!error" :style="{ marginTop: '1rem', marginBottom: '0' }">
+          {{ getErrorMessage(error) }}
+        </h4>
+      </div>
     </div>
   </div>
 </template>

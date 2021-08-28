@@ -1,6 +1,6 @@
 <template>
   <Fragment>
-    <span>Block Number</span>
+    <span class="font-medium">Block Number</span>
     <span role="img" aria-label="numbers">
       🔢
     </span>
@@ -28,7 +28,6 @@ export default defineComponent({
 
       const updateBlockNumber = (value: number) => {
         blockNumber.value = value;
-        console.log("updateBlockNumber", value);
       };
 
       if (!!library.value) {

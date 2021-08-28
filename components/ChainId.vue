@@ -1,6 +1,6 @@
 <template>
   <Fragment>
-    <span>Chain Id</span>
+    <span class="font-medium">Chain Id</span>
     <span role="img" aria-label="chain">
       ⛓
     </span>
