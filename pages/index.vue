@@ -162,9 +162,10 @@ export default defineComponent({
 
     const activatingConnector = ref();
 
-    const setActivatingConnector = (newConnector: any) => {
+    const setActivatingConnector = async (newConnector: any) => {
       activatingConnector.value = newConnector;
-      activate(newConnector, () => (activatingConnector.value = undefined));
+      await activate(newConnector);
+      activatingConnector.value = undefined;
     };
 
     return {
