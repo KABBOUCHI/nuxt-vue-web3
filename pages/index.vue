@@ -1,6 +1,10 @@
 <template>
-  <div class="bg-gray-500 min-h-screen md:flex items-center justify-center text-white">
-    <div class="relative md:max-w-lg min-h-screen md:min-h-0 w-full md:mx-auto bg-gray-800 shadow-lg md:rounded-lg px-8 py-6">
+  <div
+    class="bg-gray-500 min-h-screen md:flex items-center justify-center text-white"
+  >
+    <div
+      class="relative md:max-w-lg min-h-screen md:min-h-0 w-full md:mx-auto bg-gray-800 shadow-lg md:rounded-lg px-8 py-6"
+    >
       <Header />
 
       <hr :style="{ margin: '2rem' }" />
@@ -18,7 +22,7 @@
           v-for="(newConnector, name) in connectorsByName"
           class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
           :key="name"
-          @click="activate(newConnector)"
+          @click="setActivatingConnector(newConnector)"
         >
           <span
             class="mr-2 "
@@ -28,6 +32,28 @@
           >
             ✅
           </span>
+          <svg
+            v-else-if="activatingConnector === newConnector"
+            class="animate-spin -ml-1 mr-3 h-5 w-5 text-gray-indigo"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+
           {{ name }}
         </button>
       </div>
@@ -50,7 +76,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "@nuxtjs/composition-api";
+import { defineComponent, ref } from "@nuxtjs/composition-api";
 import {
   useWeb3,
   setWeb3LibraryCallback,
@@ -134,6 +160,13 @@ export default defineComponent({
     const { active, activate, deactivate, connector, error } = useWeb3();
     useEagerConnect();
 
+    const activatingConnector = ref();
+
+    const setActivatingConnector = (newConnector: any) => {
+      activatingConnector.value = newConnector;
+      activate(newConnector, () => (activatingConnector.value = undefined));
+    };
+
     return {
       active,
       activate,
@@ -141,7 +174,9 @@ export default defineComponent({
       connectorsByName,
       connector,
       getErrorMessage,
-      error
+      error,
+      setActivatingConnector,
+      activatingConnector
     };
   }
 });
