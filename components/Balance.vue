@@ -22,15 +22,11 @@ export default defineComponent({
     const balance = ref<number | null>();
 
     watch([account, library, chainId], () => {
-      let stale = false;
-
       if (!!library.value && !!account.value) {
         library.value
           .getBalance(account.value)
           .then((value: any) => {
-            if (!stale) {
               balance.value = value;
-            }
           })
           .catch(() => {});
       }
