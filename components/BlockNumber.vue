@@ -9,18 +9,13 @@
 </template>
 
 <script lang="ts">
+import { Web3Provider } from "@ethersproject/providers";
 import { useWeb3 } from "@kabbouchi/vue-web3";
-import {
-  defineComponent,
-  watchEffect,
-  ref,
-  onUnmounted,
-  watch
-} from "@nuxtjs/composition-api";
+import { defineComponent, ref, watch } from "@nuxtjs/composition-api";
 
 export default defineComponent({
   setup() {
-    const { chainId, library } = useWeb3();
+    const { chainId, library } = useWeb3<Web3Provider>();
     const blockNumber = ref<number | null>();
 
     watch([chainId, library], (_, __, onInvalidate) => {

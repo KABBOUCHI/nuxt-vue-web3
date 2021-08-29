@@ -3,6 +3,16 @@ import { NetworkConnector } from "@web3-react/network-connector";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { LedgerConnector } from '@web3-react/ledger-connector'
 import { AuthereumConnector } from '@web3-react/authereum-connector'
+import { Web3Provider } from "@ethersproject/providers";
+import { setWeb3LibraryCallback } from "@kabbouchi/vue-web3";
+
+function getLibrary(provider: any): Web3Provider {
+  const library = new Web3Provider(provider);
+  library.pollingInterval = 12000;
+  return library;
+}
+
+setWeb3LibraryCallback(getLibrary);
 
 const POLLING_INTERVAL = 12000;
 

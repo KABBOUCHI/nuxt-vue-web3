@@ -90,7 +90,6 @@ import {
   authereum
 } from "~/connectors";
 import { useEagerConnect } from "~/composables";
-import { Web3Provider } from "@ethersproject/providers";
 import {
   NoEthereumProviderError,
   UserRejectedRequestError as UserRejectedRequestErrorInjected
@@ -146,14 +145,6 @@ function getErrorMessage(error: Error) {
     return "An unknown error occurred. Check the console for more details.";
   }
 }
-
-function getLibrary(provider: any): Web3Provider {
-  const library = new Web3Provider(provider);
-  library.pollingInterval = 12000;
-  return library;
-}
-
-setWeb3LibraryCallback(getLibrary);
 
 export default defineComponent({
   setup() {

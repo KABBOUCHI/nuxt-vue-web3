@@ -11,7 +11,7 @@
   "dependencies": {
     "@ethersproject/providers": "^5.4.5",
     "@ethersproject/units": "^5.4.0",
-    "@kabbouchi/vue-web3": "^0.2.12",
+    "@kabbouchi/vue-web3": "^0.2.16",
     "@nuxtjs/composition-api": "^0.27.0",
     "@web3-react/authereum-connector": "^6.2.0",
     "@web3-react/frame-connector": "^6.0.9",

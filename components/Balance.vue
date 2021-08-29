@@ -12,18 +12,13 @@
 
 <script lang="ts">
 import { useWeb3 } from "@kabbouchi/vue-web3";
-import {
-  defineComponent,
-  watchEffect,
-  ref,
-  onUnmounted,
-  watch
-} from "@nuxtjs/composition-api";
+import { defineComponent, ref, watch } from "@nuxtjs/composition-api";
 import { formatEther } from "@ethersproject/units";
+import { Web3Provider } from "@ethersproject/providers";
 
 export default defineComponent({
   setup() {
-    const { account, library, chainId } = useWeb3();
+    const { account, library, chainId } = useWeb3<Web3Provider>();
     const balance = ref<number | null>();
 
     watch([account, library, chainId], () => {
