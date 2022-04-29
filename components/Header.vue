@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts">
-import { useWeb3 } from "@kabbouchi/vue-web3";
+import { useWeb3 } from "@instadapp/vue-web3";
 import { defineComponent } from "@nuxtjs/composition-api";
 
 export default defineComponent({

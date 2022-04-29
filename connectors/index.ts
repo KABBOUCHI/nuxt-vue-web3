@@ -4,7 +4,7 @@ import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import { LedgerConnector } from '@web3-react/ledger-connector'
 import { AuthereumConnector } from '@web3-react/authereum-connector'
 import { Web3Provider } from "@ethersproject/providers";
-import { setWeb3LibraryCallback } from "@kabbouchi/vue-web3";
+import { setWeb3LibraryCallback } from "@instadapp/vue-web3";
 
 function getLibrary(provider: any): Web3Provider {
   const library = new Web3Provider(provider);
@@ -17,8 +17,8 @@ setWeb3LibraryCallback(getLibrary);
 const POLLING_INTERVAL = 12000;
 
 const RPC_URLS: { [chainId: number]: string } = {
-  1: process.env.RPC_URL_1 as string,
-  137: "https://rpc-mainnet.matic.network"
+  1: "https://rpc.ankr.com/eth",
+  137: "https://rpc.ankr.com/polygon",
 };
 
 export const injected = new InjectedConnector({

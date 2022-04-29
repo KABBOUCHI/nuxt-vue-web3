@@ -26,14 +26,6 @@ export default {
   css: [
   ],
 
-  publicRuntimeOptions: {
-    RPC_URL_1: process.env.RPC_URL_1,
-  },
-  
-  env: {
-    RPC_URL_1: process.env.RPC_URL_1,
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/vue-fragment.js"

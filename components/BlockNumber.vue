@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { Web3Provider } from "@ethersproject/providers";
-import { useWeb3 } from "@kabbouchi/vue-web3";
+import { useWeb3 } from "@instadapp/vue-web3";
 import { defineComponent, ref, watch } from "@nuxtjs/composition-api";
 
 export default defineComponent({

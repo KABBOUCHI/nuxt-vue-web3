@@ -81,7 +81,7 @@ import {
   useWeb3,
   setWeb3LibraryCallback,
   UnsupportedChainIdError
-} from "@kabbouchi/vue-web3";
+} from "@instadapp/vue-web3";
 import {
   injected,
   network,

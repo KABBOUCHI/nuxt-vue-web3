@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { useWeb3 } from "@kabbouchi/vue-web3";
+import { useWeb3 } from "@instadapp/vue-web3";
 import { defineComponent, ref, watch } from "@nuxtjs/composition-api";
 import { formatEther } from "@ethersproject/units";
 import { Web3Provider } from "@ethersproject/providers";
