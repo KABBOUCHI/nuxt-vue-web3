@@ -1503,17 +1503,18 @@
   resolved "https://registry.yarnpkg.com/@gar/promisify/-/promisify-1.1.2.tgz#30aa825f11d438671d585bd44e7fd564535fc210"
   integrity sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==
 
-"@instadapp/vue-web3@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@instadapp/vue-web3/-/vue-web3-0.7.0.tgz#966e05e10aceb16d6695b1f8d8715898573234a3"
-  integrity sha512-LzEd5gMZtHG0KIOF4mpOJTXKBtFwtwzCSg3PpYw1ca37b8w3E+1ixHm7mSW7QuLdhxjvzRa76hMGZIBPt19Tww==
+"@instadapp/vue-web3@^0.10.1":
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/@instadapp/vue-web3/-/vue-web3-0.10.1.tgz#cebfa9198462571c9266bfc6e4ab665faa9745e4"
+  integrity sha512-3536RYtCAgw8qLiusanyfdtaB3QlpVFCzX2mz5zKgfR0JSFWjkPO3mE840nunDOvKzsjBVLzzxx8UxO2hnLKMg==
   dependencies:
     "@ethersproject/bytes" "^5.4.0"
     "@ethersproject/keccak256" "^5.4.0"
     "@web3-react/abstract-connector" "^6.0.7"
     "@web3-react/types" "^6.0.7"
+    events "^3.3.0"
     tiny-invariant "^1.1.0"
-    vue-demi "^0.11.4"
+    vue-demi "^0.13.11"
 
 "@jridgewell/gen-mapping@^0.1.0":
   version "0.1.1"
@@ -6923,7 +6924,7 @@ eventemitter3@4.0.7:
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-4.0.7.tgz#2de9b68f6528d5644ef5c59526a1b4a07306169f"
   integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
 
-events@^3.0.0:
+events@^3.0.0, events@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
   integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
@@ -14202,10 +14203,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
-vue-demi@^0.11.4:
-  version "0.11.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.11.4.tgz#6101992fe4724cf5634018a16e953f3052e94e2a"
-  integrity sha512-/3xFwzSykLW2HiiLie43a+FFgNOcokbBJ+fzvFXd0r2T8MYohqvphUyDQ8lbAwzQ3Dlcrb1c9ykifGkhSIAk6A==
+vue-demi@^0.13.11:
+  version "0.13.11"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.13.11.tgz#7d90369bdae8974d87b1973564ad390182410d99"
+  integrity sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==
 
 vue-fragment@^1.5.2:
   version "1.5.2"
